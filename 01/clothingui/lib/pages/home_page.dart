@@ -1,4 +1,7 @@
+import 'package:clothingui/utils/item.dart';
+import 'package:clothingui/utils/item_carousel.dart';
 import 'package:clothingui/utils/nav_utils.dart';
+import 'package:clothingui/utils/topsales.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,77 +27,54 @@ class HomePage extends StatelessWidget {
       drawer: customDrawer,
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                height: 350,
-                color: Colors.white,
+              padding: EdgeInsets.only(bottom: 5),
+              child: Text(
+                'Hot collection',
+                style: TextStyle(fontSize: 20),
               ),
             ),
-            const SizedBox(
+            Padding(
+              padding: EdgeInsets.only(bottom: 20),
+              child: Text(
+                'with 30% discount',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            ItemCarousel(),
+            SizedBox(
               height: 30,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 15),
+            Padding(
+              padding: EdgeInsets.only(bottom: 15),
               child: Text(
-                'Top sales',
+                'Top Sales',
                 style: TextStyle(fontSize: 22),
-                //textAlign: TextAlign.left,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                ],
+            TopSale(
+              child1: ItemTopSale(
+                name: '5.jpg',
+              ),
+              child2: ItemTopSale(
+                name: '6.jpg',
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                ],
+            TopSale(
+              child1: ItemTopSale(
+                name: '7.jpg',
+              ),
+              child2: ItemTopSale(
+                name: '8.jpg',
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    height: 160,
-                    width: 135,
-                    color: Colors.white,
-                  ),
-                ],
+            TopSale(
+              child1: ItemTopSale(
+                name: '9.jpg',
+              ),
+              child2: ItemTopSale(
+                name: '10.jpg',
               ),
             ),
           ],

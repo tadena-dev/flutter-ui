@@ -72,7 +72,9 @@ class _NavPageState extends State<NavPage> {
           ),
         ],
       ),
-      body: pages[currentIndex],
+      body: SafeArea(
+        child: pages[currentIndex],
+      ),
     );
   }
 }
