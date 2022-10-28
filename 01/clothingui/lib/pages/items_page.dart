@@ -1,3 +1,4 @@
+import 'package:clothingui/utils/cloth_tab_list.dart';
 import 'package:flutter/material.dart';
 
 class ItemsPage extends StatefulWidget {
@@ -11,7 +12,7 @@ class _ItemsPageState extends State<ItemsPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 2,
       child: Scaffold(
         appBar: AppBar(
@@ -20,23 +21,31 @@ class _ItemsPageState extends State<ItemsPage> {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.shopping_bag_rounded),
+              icon: const Icon(Icons.search),
             ),
           ],
           bottom: const TabBar(
             tabs: [
-              Icon(Icons.male),
-              Icon(Icons.female),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('Hot Collection'),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('New Collection'),
+              ),
             ],
           ),
         ),
-        body: TabBarView(
-          children: const [
-            Center(
-              child: Text('hello'),
+        body: const TabBarView(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: HotCollectionTab(),
             ),
-            Center(
-              child: Text('hello'),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: NewCollectionTab(),
             ),
           ],
         ),

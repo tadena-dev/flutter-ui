@@ -1,7 +1,6 @@
-import 'package:clothingui/utils/item.dart';
 import 'package:clothingui/utils/item_carousel.dart';
 import 'package:clothingui/utils/nav_utils.dart';
-import 'package:clothingui/utils/topsales.dart';
+import 'package:clothingui/utils/cloth_items.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -53,29 +52,13 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 22),
               ),
             ),
-            TopSale(
-              child1: ItemTopSale(
-                name: '5.jpg',
-              ),
-              child2: ItemTopSale(
-                name: '6.jpg',
-              ),
+            ClothItems(
+              firstImage: '1.jpg',
+              secondImage: '2.jpg',
             ),
-            TopSale(
-              child1: ItemTopSale(
-                name: '7.jpg',
-              ),
-              child2: ItemTopSale(
-                name: '8.jpg',
-              ),
-            ),
-            TopSale(
-              child1: ItemTopSale(
-                name: '9.jpg',
-              ),
-              child2: ItemTopSale(
-                name: '10.jpg',
-              ),
+            ClothItems(
+              firstImage: '3.jpg',
+              secondImage: '4.jpg',
             ),
           ],
         ),
