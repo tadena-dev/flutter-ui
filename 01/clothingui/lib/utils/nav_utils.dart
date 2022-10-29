@@ -1,33 +1,54 @@
 import 'package:flutter/material.dart';
 
-const drawerHeader = DrawerHeader(
-  decoration: BoxDecoration(
-    color: Colors.blue,
-  ),
-  child: Text(
-    'Drawer Header',
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 24,
+final drawerHeader = DrawerHeader(
+    decoration: const BoxDecoration(
+      color: Colors.black26,
     ),
-  ),
-);
+    child: Align(
+      alignment: Alignment.center,
+      child: Column(
+        children: const [
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: Icon(
+              Icons.account_circle,
+              size: 80,
+            ),
+          ),
+          Text(
+            'tadena.dev@gmail.com',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+        ],
+      ),
+    ));
 
 final customDrawer = Drawer(
   width: 250,
   child: ListView(
-    children: const [
+    children: [
       drawerHeader,
-      ListTile(
-        leading: Icon(Icons.account_circle),
+      const ListTile(
+        leading: Icon(
+          Icons.account_circle,
+          color: Colors.white54,
+        ),
         title: Text('Account'),
       ),
-      ListTile(
-        leading: Icon(Icons.message),
+      const ListTile(
+        leading: Icon(
+          Icons.message,
+          color: Colors.white54,
+        ),
         title: Text('Messages'),
       ),
-      ListTile(
-        leading: Icon(Icons.settings),
+      const ListTile(
+        leading: Icon(
+          Icons.settings,
+          color: Colors.white54,
+        ),
         title: Text('Settings'),
       ),
     ],

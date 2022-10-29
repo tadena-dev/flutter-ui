@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Cloth App UI Demo',
       theme: customAppTheme,
       home: const NavPage(),
     );
@@ -40,13 +40,6 @@ class _NavPageState extends State<NavPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.transparent,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white60,
-        elevation: 0,
-        showUnselectedLabels: false,
-        showSelectedLabels: false,
         currentIndex: currentIndex,
         onTap: (value) => setState(() {
           currentIndex = value;
@@ -56,19 +49,19 @@ class _NavPageState extends State<NavPage> {
             icon: Icon(
               Icons.home,
             ),
-            label: '',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.dashboard,
             ),
-            label: '',
+            label: 'Collections',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_cart,
             ),
-            label: '',
+            label: 'Cart',
           ),
         ],
       ),

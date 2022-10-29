@@ -18,7 +18,7 @@ class ClothItems extends StatelessWidget {
         bottom: 15,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
@@ -37,7 +37,6 @@ class ClothItems extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Icon(
                     Icons.star_border,
-                    color: Colors.pinkAccent,
                     size: 25,
                   ),
                 ),
@@ -54,7 +53,6 @@ class ClothItems extends StatelessWidget {
                         children: const [
                           Icon(
                             Icons.shopping_bag_outlined,
-                            color: Colors.pinkAccent,
                             size: 18,
                           ),
                           Text('Buy now')
@@ -83,7 +81,6 @@ class ClothItems extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Icon(
                     Icons.star_border,
-                    color: Colors.pinkAccent,
                     size: 25,
                   ),
                 ),
@@ -100,7 +97,6 @@ class ClothItems extends StatelessWidget {
                         children: const [
                           Icon(
                             Icons.shopping_bag_outlined,
-                            color: Colors.pinkAccent,
                             size: 18,
                           ),
                           Text('Buy now')
